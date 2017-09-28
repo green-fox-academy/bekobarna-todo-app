@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Tasks {
 
-    public void TaskPrint() {
+    public void TaskPrint() {                                                                       //Print to list and error handling
         try {
             Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
             List<String> myList = Files.readAllLines(filePath);
@@ -21,7 +21,7 @@ public class Tasks {
         }
     }
 
-    public void TaskAdd(String[] newTask) {
+    public void TaskAdd(String[] newTask) {                                                         //Add to list and error handling
         StringBuilder inputToList = new StringBuilder();
         for (int i = 1; i < newTask.length; i++) {
             inputToList.append(newTask[i] + " ");
@@ -44,11 +44,21 @@ public class Tasks {
         }
     }
 
-    public void TaskRemove (int number) {
-
-
+    public void TaskRemove (String[] newTask) {                                                           //Remove from list and error handling
+        try {
+            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
+            List<String> myList = Files.readAllLines(filePath);
+            if (myList.size() == 0) {
+                System.out.println("No todos for today! :)");
+            } else {
+                for (int i = 0; i < myList.size(); i++) {
+                    System.out.println((i + 1) + " " + myList.get(i));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("error");
+        }
     }
-
 
 }
 

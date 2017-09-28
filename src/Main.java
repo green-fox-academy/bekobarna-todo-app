@@ -22,7 +22,10 @@ public class Main {
             System.out.println("");
             taskList.TaskAdd(args);
         }
-
+        if ((args.length != 0) && ((args[0]).equals("-r"))) {                                                            //add new task and new task error handling
+            System.out.println("");
+            taskList.TaskRemove(args);
+        }
 
 
 
