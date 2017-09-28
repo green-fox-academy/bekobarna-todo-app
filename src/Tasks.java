@@ -19,7 +19,7 @@ public class Tasks {
         } catch (Exception e) {
             System.out.println("error");
         }
-    }
+    }                               //Print to list and error handling
 
     public void TaskAdd(String[] newTask) {                                                         //Add to list and error handling
         StringBuilder inputToList = new StringBuilder();
@@ -42,8 +42,11 @@ public class Tasks {
             System.out.println("");
             System.out.println("Unable to add: no task provided");
         }
-    }
+    }                 //Add to list and error handling
 
+    public void TaskRemove (int number) {                       //Remove from list and error handling
+
+<<<<<<< HEAD
     public void TaskRemove (String[] newTask) {                                                           //Remove from list and error handling
         try {
             Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
@@ -58,6 +61,10 @@ public class Tasks {
         } catch (Exception e) {
             System.out.println("error");
         }
+=======
+
+
+>>>>>>> 0610b3d71157ddf8c76c7af970f405c34c6ac187
     }
 
 }
