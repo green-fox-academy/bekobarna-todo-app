@@ -3,11 +3,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class UsageInformation {
+public class Help {
 
     ArrayList<String> listBasic;
 
-    public UsageInformation() {
+    public Help() {
         listBasic = new ArrayList<>();
         listBasic.add("Command Line Todo application");
         listBasic.add("=============================");
@@ -32,7 +32,6 @@ public class UsageInformation {
             for (String i : myList) {
                 System.out.println(i);
             }
-
         } catch (Exception e) {
             System.out.println("Unable to read file: my-file.txt");
         }*/
@@ -40,10 +39,5 @@ public class UsageInformation {
         for (int i = 0; i < listBasic.size(); i++) {
                 System.out.println(listBasic.get(i));
         }
-
-        /*for (String s: listBasic) {
-            System.out.println(s);
-        }*/
-
     }
 }

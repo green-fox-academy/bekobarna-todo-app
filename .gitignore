@@ -3,6 +3,7 @@
 out
 *.iml
 *.iml
+*.class
 
 # gf software files
 .gf.json
