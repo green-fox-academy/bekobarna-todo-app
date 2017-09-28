@@ -3,7 +3,7 @@
 out
 *.iml
 *.iml
-src/*.class
+*.class
 
 # gf software files
 .gf.json
