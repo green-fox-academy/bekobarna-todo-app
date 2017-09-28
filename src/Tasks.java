@@ -19,28 +19,36 @@ public class Tasks {
         } catch (Exception e) {
             System.out.println("error");
         }
-        /*try {
-            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
-            Files.write(filePath, listBasic);
-        } catch (Exception e) {
-            System.out.println("Uh-oh, could not write the file!");
-        }*/
     }
 
     public void TaskAdd(String[] newTask) {
-        StringBuilder result = new StringBuilder();
+        StringBuilder inputToList = new StringBuilder();
         for (int i = 1; i < newTask.length; i++) {
-            result.append(newTask[i] + " ");
+            inputToList.append(newTask[i] + " ");
         }
-        String resultString= result.toString();
-        try {
-            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
-            List<String> myListOriginal = Files.readAllLines(filePath);
-            myListOriginal.add(myListOriginal.size(), resultString);
-            Files.write(filePath, myListOriginal);
-        } catch (Exception e) {
-            System.out.println("error");
+        String resultString = inputToList.toString();
+
+        if (!resultString.isEmpty()) {
+            try {
+                Path filePath = Paths
+                    .get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
+                List<String> myListOriginal = Files.readAllLines(filePath);
+                myListOriginal.add(myListOriginal.size(), resultString);
+                Files.write(filePath, myListOriginal);
+            } catch (Exception e) {
+                System.out.println("error");
+            }
+        } else {
+            System.out.println("");
+            System.out.println("Unable to add: no task provided");
         }
+    }
+
+    public void TaskRemove (int number) {
+
 
     }
+
+
 }
+
