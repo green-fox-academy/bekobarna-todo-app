@@ -19,7 +19,7 @@ public class Tasks {
         } catch (Exception e) {
             System.out.println("error");
         }
-    }
+    }                               //Print to list and error handling
 
     public void TaskAdd(String[] newTask) {
         StringBuilder inputToList = new StringBuilder();
@@ -42,9 +42,10 @@ public class Tasks {
             System.out.println("");
             System.out.println("Unable to add: no task provided");
         }
-    }
+    }                 //Add to list and error handling
 
-    public void TaskRemove (int number) {
+    public void TaskRemove (int number) {                       //Remove from list and error handling
+
 
 
     }
