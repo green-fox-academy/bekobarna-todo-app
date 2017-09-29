@@ -8,10 +8,9 @@ public class Help {
 
     public Help() {
         listHelp = new ArrayList<>();
-        listHelp.add("Command Line Todo application");
+        listHelp.add("\nCommand Line Todo application");
         listHelp.add("=============================");
-        listHelp.add("");
-        listHelp.add("-l   Lists all the tasks");
+        listHelp.add("\n-l   Lists all the tasks");
         listHelp.add("-a   Adds a new task");
         listHelp.add("-r   Removes an task");
         listHelp.add("-c   Completes an task");

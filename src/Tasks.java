@@ -12,12 +12,13 @@ public class Tasks {
             if (myList.size() == 0) {
                 System.out.println("\nNo todos for today! :)");
             } else {
+                System.out.println("");
                 for (int i = 0; i < myList.size(); i++) {
-                    System.out.println((i+1) + " " + myList.get(i));
+                    System.out.println((i + 1) + " " + myList.get(i));
                 }
             }
         } catch (Exception e) {
-            System.out.println("\nCannot read tasks.txt");
+            System.out.println("\nCannot access or read tasks.txt");
         }
     }                               //Print to list and error handling
 
@@ -35,25 +36,13 @@ public class Tasks {
                 myListOriginal.add(myListOriginal.size(), resultString);
                 Files.write(filePath, myListOriginal);
             } catch (Exception e) {
-                System.out.println("\nCannot read tasks.txt");
+                System.out.println("\nCannot access or read tasks.txt");
             }
         } else {
-            System.out.println("Unable to add: no task provided");
+            System.out.println("\nUnable to add: no task provided");
         }
     }                 //Add to list and error handling
 
-    public void taskRemove (String[] newTask) {                 //Remove from list and error handling
-        try {
-            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
-            List<String> myListOriginal = Files.readAllLines(filePath);
-            if (myListOriginal.size() == 1) {
-                myListOriginal.remove(1);
-                Files.write(filePath, myListOriginal);
-            }
-        } catch (Exception e) {
-            System.out.println("\nCannot read tasks.txt");
-        }
 
-    }
 }
 
