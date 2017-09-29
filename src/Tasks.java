@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Tasks {
 
-    public void taskPrint() {                                                                       //Print to list and error handling
+    public void taskPrint() {                                   //Print to list and error handling
         try {
             Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
             List<String> myList = Files.readAllLines(filePath);
@@ -22,7 +22,7 @@ public class Tasks {
         }
     }                               //Print to list and error handling
 
-    public void taskAdd(String[] newTask) {                                                         //Add to list and error handling
+    public void taskAdd(String[] newTask) {                     //Add to list and error handling
         StringBuilder inputToList = new StringBuilder();
         for (int i = 1; i < newTask.length; i++) {
             inputToList.append(newTask[i] + " ");

@@ -11,9 +11,8 @@ public class TaskAddOld {
             List<String> myListOriginal = Files.readAllLines(filePath);
             myListOriginal.add(newTask);
             Files.write(filePath, myListOriginal);
-
         } catch (Exception e) {
-            System.out.println("\nCannot access or read tasks.txt");
+            System.out.println("error");
         }
 
     }
