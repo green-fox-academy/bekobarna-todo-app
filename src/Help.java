@@ -17,7 +17,7 @@ public class Help {
         listHelp.add("-c   Completes an task");
     }
 
-    public void PrintHelp() {
+    public void printHelp() {
         for (int i = 0; i < listHelp.size(); i++) {
             System.out.println(listHelp.get(i));
         }
